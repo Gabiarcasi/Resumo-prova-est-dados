@@ -1,0 +1,1434 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Prova Est dados</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8104effe-a7af-4c24-8985-9087a8251e10" class="page sans"><header><h1 class="page-title">Prova Est dados</h1><p class="page-description"></p></header><div class="page-body"><p id="f116311a-4908-4753-99df-af37fe574f77" class="">
+</p><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Ordenação Busca Binária</summary><div class="indented"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Aplicação com vetor ordenado</summary><div class="indented"><p id="487cb72a-8bc0-4598-9081-76fa3ae9a9be" class="">Esta aplicação possibilita o armazenamento de dez números quaisquer de forma ordenada. Método muito lento quando não encontramos o valor ou o valor procurado está na última posição.</p><p id="25496241-6101-455c-a096-8b5d47e6181b" class="">Neste algoritmo de ordenação serão efetuadas comparações entre os dados armazenados no vetor. Quando a situação procurada (crescente ou decrescente) é encontrada, uma troca de posições é realizada. Assim, um laço com as comparações e as trocas será efetuado na quantidade de vezes igual ao número de dados do vetor menos 1, ou seja, na maior quantidade possível de trocas.</p><p id="e2eb689d-3d66-4d29-b2b2-81c4b9a4d57a" class="">Primeiro laço: compara se o número da posição 1 (número 5) é maior que o da posição 2 (número 4). Se for, então ocorre a troca e o avanço; caso contrário, compara a posição 2 com a 3.</p><p id="28e3ad16-fc07-4b1e-9805-4e6eda395a1c" class="">Laço 2 em diante: repete o ciclo até ordenar todo o vetor, sempre comparando com a 1ª posição.</p><pre id="b3b0a4d0-1250-49af-8574-0c0297dfc337" class="code"><code>package ed_ordena;
+
+
+public class ordena_troca {    
+   
+    public static void main(String[] args) {
+
+               int num [] = new int [10];
+  	num [0] = 5;
+        	num [1] = 4;
+        	num [2] = 2;
+        	num [3] = 1;
+        	num [4] = 8;
+        	num [5] = 2;
+        	num [6] = 4;
+        	num [7] = 5;
+        	num [8] = 9;
+        	num [9] = 7;		
+bolha (num);
+		
+for (int i = 0; i &lt; num.length; i++)
+			System.out.println (num [i]);
+	}
+
+
+	public static void bolha (int numeros []){
+
+		final int n = numeros.length; //tamanho do vetor
+		int aux; //variavel auxiliar de troca
+
+		for (int i = 0; i &lt; n-1; i++){
+			for (int j = 0; j &lt; n-1-i; j++){
+				if (numeros[j] &gt; numeros[j+1]){
+				aux = numeros[j];
+				numeros[j] = numeros[j+1];
+				numeros[j+1] = aux;
+				}
+			}
+		}
+	}
+}</code></pre><p id="91f8de29-08e2-451d-810b-3fd5d30c323b" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Ordenação comparando com o anterior</summary><div class="indented"><p id="bb62e36c-7376-4e10-a519-d50c73f2cf32" class="">Neste algoritmo será eleito o segundo número do vetor para iniciar a ordenação; assim, os elementos “a esquerda do número eleito” estão sempre ordenados de forma crescente ou decrescente. Logo, um laço com as comparações será efetuado na quantidade de vezes igual ao número de dados do vetor menos 1, pois as comparações começam no segundo elemento do vetor.</p><p id="c035f12e-bfa4-4ced-882b-ab5e55242347" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Busca Linear</summary><div class="indented"><p id="31826f46-ea0c-4fce-9a4c-b6e2a4f3b4d3" class="">A próxima aplicação nos mostra uma busca linear, onde alimentamos um vetor e identificamos se um determinado valor está ou não inserido no mesmo.</p><pre id="0945d809-2d36-41cc-92c1-1fa5d12a4e17" class="code"><code>package ed_blinear;
+ import java.io.*;
+
+class busca_linear{
+	public static void main (String args[]){
+		BufferedReader entrada;
+		entrada = new BufferedReader (new InputStreamReader (System.in));
+		try{
+			int qte;
+			boolean ok, achou;
+			do{
+				System.out.println (&quot; -- Entrada de Dados -- &quot;);
+				System.out.println (&quot;Que tipo deseja usar?&quot;);
+				System.out.println (&quot;1 - Entrada Vetor Numeros Inteiros&quot;);
+				System.out.println (&quot;2 - Fim Opcao - &quot;);
+				int opcao = Integer.parseInt (entrada.readLine());
+				switch (opcao){
+				case 1 :
+					System.out.println (&quot;Quantos Numeros? &quot;);
+					qte = Integer.parseInt (entrada.readLine());
+					int numeros [] = new int [qte];
+					for (int i = 0; i &lt; qte; i++){
+					   System.out.println (&quot; Numero[&quot; + (i+1) + &quot;]= &quot;);	
+                                            numeros [i] = Integer.parseInt (entrada.readLine());
+                                             
+					}
+					System.out.println();
+					System.out.println(&quot;Qual Numero Deseja Pesquisar? &quot;);
+					int x = Integer.parseInt (entrada.readLine());
+					achou = Busca.linear(x, numeros);
+					if (achou)
+						System.out.println(&quot;Numero &quot;+x+&quot; Presente na Relacao&quot; );
+					else
+						System.out.println(&quot;Numero Nao Presente na Relacao&quot;);
+					ok = true;
+					break;
+                                  
+                                case 2:
+                                        System.out.println(&quot;Fim da execução ! &quot;);
+                                        System.exit(0);
+                                default :					
+                                        System.out.println(&quot;Opcao Invalida ! &quot;);
+					System.out.println(&quot;Tente Novamente.&quot;);
+					System.out.println();
+					ok = false;
+				}
+			} while (!ok);
+		}catch (Exception e){
+			System.out.println(&quot;Valor vazio. Ocorreu um erro durante a leitura !&quot;);
+		}
+	}
+}        
+
+
+Classe de Busca:
+
+package ed_blinear;
+class Busca{
+	public static boolean linear (int x, int dados []){
+		final int n = dados.length;
+		for (int i = 0; i &lt; n; i++)
+			if (x == dados[i])                             
+				return true;                 
+                return false;                        
+	}
+     
+}</code></pre></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Busca Binária</summary><div class="indented"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Explicação</summary><div class="indented"><p id="e3607dbb-c72b-4527-9840-f0476488d527" class="">Utilizado para localizar um dado dentro de um vetor ordenado e sem repetições. Para iniciar o algoritmo, o dado que se deseja localizar é digitado pelo usuário e um laço com as comparações é efetuado.</p><p id="181fdefa-9fd2-43ee-94ec-ef7be2f357e8" class="">Execução nº 1 do laço:</p><pre id="2367884e-0477-41e8-b0a0-5a20f2ce6e12" class="code"><code>Inicio =1
+Fim = 10
+Posi = (inicio+fim)/2
+Posi = (1+10)/2 = 11/2 = 5,5
+Parte inteiria de Posi = 5</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9749706f-4bea-461b-9bc2-75feefb80ff9"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">2 4 7 9 12 15 18 20 24 30  1 2 3 4 5 6 7 8 9 10</div></figure><p id="9709fc13-e35d-4c64-90ab-9e7795d1ae1a" class="">Compara-se o número da posição 5 (número 12) com o número procurado, por exemplo o 9, caso o número da posição procurado seja menor que o da posição 5, temos um novo fim.</p><p id="3e620df7-41b4-4517-a82d-739813e7efba" class="">Execução nº 2 do laço:</p><pre id="058f0192-6b74-4166-8d11-baf9ea2467da" class="code"><code>Inicio =1
+Fim = Posi – 1 = 5 -1 = 4
+Posi = (inicio+fim)/2
+Posi = (1+4)/2 = 5/2 = 2,5
+Parte inteiria de Posi = 2</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0ea5cc0e-a8fc-4e1d-b34c-b55f2c054d48"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">2 4 7 9 12 15 18 20 24 30  1 2 3 4 5 6 7 8 9 10</div></figure><p id="a4a37f34-72bf-4729-8465-d19feda0a97e" class="">Compara-se o número da posição 2 (número 4) com o número procurado, o número 9, caso o número da posição procurado seja maior que o da posição 2, temos um novo início.</p><p id="fde5066b-a582-4454-a1a2-848f55a4f063" class="">Execução nº 3 do laço:</p><pre id="78f03a1f-cf8c-4e0e-9e22-8ca6555ae010" class="code"><code>Inicio =Posi + 1 = 2 + 1 = 3
+Fim = 4
+Posi = (inicio+fim)/2
+Posi = (3+4)/2 = 7/2 = 3,5
+Parte inteiria de Posi = 3</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8a1c502c-6b4f-4d97-83c5-2ed0befb4460"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">2 4 7 9 12 15 18 20 24 30  1 2 3 4 5 6 7 8 9 10</div></figure><p id="6cb43050-9e8f-4b4f-b9cc-0afba1998156" class="">Compara-se o número da posição 3 (número 7) com o número procurado, o número 9, caso o número da posição procurado seja maior que o da posição 3, temos um novo início.</p><p id="ab03ee14-14cc-4bbb-a8ac-a00eef97d365" class="">Execução nº 4 do laço:</p><pre id="4610276c-e0b3-4fe8-bc95-fef09726bee9" class="code"><code>Inicio =Posi + 1 = 3 + 1 = 4
+Fim = 4
+Posi = (inicio+fim)/2
+Posi = (4+4)/2 = 8/2 = 4
+Parte inteiria de Posi = 4</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="7ed6be4f-efaf-49c0-88a3-513db4d9aa24"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">2 4 7 9 12 15 18 20 24 30  1 2 3 4 5 6 7 8 9 10</div></figure><p id="ebb92f00-d3c1-4bd5-ab50-c1a502295cd0" class="">Compara-se o número da posição 4 (número 9). Se forem iguais, a execução do laço será encerrada. Como o número da posição 4 é igual ao número procurado, a busca se encerra, ou quando a posição Fim for igual a posição Inicio.</p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Exemplos</summary><div class="indented"><pre id="63869e3f-7faa-4f67-959f-47c6e757fa1b" class="code"><code>package bbin;
+
+import java.io.*;
+
+class busca_bbin{
+	public static void main (String args[]){
+		BufferedReader entrada;
+		entrada = new BufferedReader (new InputStreamReader (System.in));
+		try{
+			int qte;
+			boolean ok, achou;
+			do{
+				System.out.println (&quot; -- Entrada de Dados -- &quot;);
+				System.out.println (&quot;Que tipo deseja usar?&quot;);
+				System.out.println (&quot;1 - Entrada Vetor Numeros Inteiros&quot;);
+				System.out.println (&quot;2 - Fim Opcao - &quot;);
+				int opcao = Integer.parseInt (entrada.readLine());
+				switch (opcao){
+				case 1 :
+					System.out.println (&quot;Quantos Numeros? &quot;);
+					qte = Integer.parseInt (entrada.readLine());
+					int numeros [] = new int [qte];
+					for (int i = 0; i &lt; qte; i++){
+					   System.out.println (&quot; Numero[&quot; + (i+1) + &quot;]= &quot;);	
+                                            numeros [i] = Integer.parseInt (entrada.readLine());
+                                             
+					}
+					System.out.println();
+					System.out.println(&quot;Qual Numero Deseja Pesquisar? Busca Binária. &quot;);
+					int x = Integer.parseInt (entrada.readLine());
+					achou = BuscaBinaria.binaria(x, numeros);
+					if (achou)
+						System.out.println(&quot;Numero &quot;+x+&quot; Presente na Relacao&quot; );
+					else
+						System.out.println(&quot;Numero Nao Presente na Relacao&quot;);
+					ok = true;
+					break;
+                        
+                                case 2:
+                                        System.out.println(&quot;Fim da execução ! &quot;);
+                                        System.exit(0);
+                                default :					
+                                        System.out.println(&quot;Opcao Invalida ! &quot;);
+					System.out.println(&quot;Tente Novamente.&quot;);
+					System.out.println();
+					ok = false;
+				}
+			} while (!ok);
+		}catch (Exception e){
+			System.out.println(&quot;Valor vazio. Ocorreu um erro durante a leitura !&quot;);
+		}
+	}
+}</code></pre><pre id="6ea90862-5689-4062-b1b5-6be97a09f741" class="code"><code>Classe BuscaBinaria
+
+package bbin;
+class BuscaBinaria{
+	public static boolean binaria(int x, int numeros []){
+		int inicio = 0, fim = numeros.length-1;
+		int meio;
+		while (inicio &lt;= fim) {
+			meio = (inicio + fim) / 2;
+			if (x == numeros[meio])
+				return true;
+			if (x &lt; numeros[meio])
+				fim = meio - 1;
+			else
+				inicio = meio + 1;
+		}
+		return false;
+	}
+}</code></pre></div></details></div></details></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Manipulação de Arquivos</summary><div class="indented"><h3 id="70be8a13-cdf7-4ac3-881c-a89222dbb969" class="">Acesso a arquivos, operações e manipulações</h3><p id="11e67431-427c-4fb3-8559-30f7ae202963" class="">Um arquivo é todo e qualquer local em que são customizados documentos, formados a partir da atividade de uma organização. Os documentos, também chamados de informação arquivística, são a geração espontânea da empresa.
+O arquivo constitui um repositório de informações que pode provar alguma coisa, é fonte de evidências de atividades e eventos ocorridos. Isso o diferencia da biblioteca, que é um repositório de informações que tem por função instruir o usuário acerca de algum assunto.
+Tipo de arquivo quanto às formas de acesso</p><h2 id="2f754514-71cd-4700-8e33-615917b320ae" class="">1-Arquivos Sequenciais</h2><p id="8caa5f19-7865-4675-9e15-7bb063b8c6eb" class="">Num arquivo sequencial a organização de seus itens faz-se de forma que para acessar um dado registro é necessário varrer todos que o antecedem.</p><p id="ea432303-e2a4-4aa5-8fdc-cf3c347b2ee3" class="">É a mais conhecida e usada organização de arquivo.
+Apresenta as mais simples implementações de operações básicas (inserção, remoção, consulta).</p><h2 id="e491ad0e-310d-4fb2-9211-25cfa91c297b" class="">2-Arquivos de acesso aleatório</h2><p id="228fb3d5-6cb3-4f20-8a02-5f2d841dcec6" class="">Cada registro é armazenado em uma posição específica. Com isso, as informações podem ser lidas independentemente
+da ordem em que foram inseridas.</p><p id="dd2a50bf-6b19-4b21-9aad-2f41c9cbb5a9" class="">
+</p><h2 id="00a28e14-4cc2-44ca-8423-98e762d2356e" class="">Manipulação de Arquivos: Criando Inserção</h2><pre id="886639ee-f566-470f-893d-d9a45e8376ea" class="code"><code>package arquivo0;
+
+import java.io.*;
+
+class CadAgenda{
+
+   public static void main(String[] args){
+      try{
+         BufferedReader entrada; // ler a entrada de dados
+
+         entrada = new BufferedReader (new InputStreamReader (System.in)); 
+         // InputStreamReader é uma ponte de fluxos de bytes para fluxos de caracteres: ele lê
+         // os bytes e os decodifica em caracteres usando um especificado charset.
+
+         //System.in:  uma variável que armazena a entrada padrão de dados da aplicação
+
+         BufferedWriter saida; // Grava texto em um fluxo de saída de caracteres
+
+         saida = new BufferedWriter (new FileWriter (&quot;c:/Agenda.txt&quot;, true));
+
+         System.out.println (&quot;Digite o nome&quot;);
+         String Nome = entrada.readLine();
+         System.out.println (&quot;Digite o endereço&quot;);
+         String Endereco = entrada.readLine();
+         System.out.println (&quot;Digite seu telefone&quot;);
+         String Telefone = entrada.readLine();
+         regAgenda regAg1 = new regAgenda(Nome, Endereco, Telefone);//cria o registro no arquivo
+
+         saida.write(regAg1.mostraNome()+&quot;\t&quot;);//”\t” é similar a tecla “tab”. Cria um espaçamento
+         saida.write(regAg1.mostraEnd()+&quot;\t&quot;);
+         saida.write(regAg1.mostraTel()+&quot;\n&quot;);
+         saida.flush(); 
+         // Se existir algum dado que não estiver ainda no disco e está ainda em um buffer em 
+         // memória, flush dá a descarga nesse buffer (ou seja, força a gravação ou o envio dos
+         //bytes que estão no buffer. Sai da memória principal, grava no arquivo no disco).
+         saida.close(); // Fecha o scanner aberto
+      } catch (Exception e){
+         System.out.println(&quot;Erro de Gravação&quot;);
+      }
+   }
+}</code></pre><h3 id="d3bf28a7-7378-4879-97d9-fa19aab89fc0" class="">Classe de itens a serem inseridos no arquivo.</h3><pre id="7a255709-8f67-4159-a059-6b80402b45bf" class="code"><code>package arquivo0;
+
+public class regAgenda{
+   private String nome;
+   private String end;
+   private String tel;
+
+   public regAgenda (String nom, String ender, String telef){
+      nome = nom;
+      end = ender;
+      tel = telef;
+   }
+   
+   public String mostraNome (){
+        return nome;
+   }
+   public String mostraEnd (){
+         return end;
+   }
+   public String mostraTel (){
+         return tel;
+   }
+}</code></pre><h2 id="6232c53b-f26a-493d-86e2-6e982c8f27e0" class="">Manipulação de Arquivos: Criando Consulta e Alteração.</h2><pre id="1238c2a6-afb0-41cd-8020-6b0dd7ec56c2" class="code"><code>package arquivo;
+import java.io.*;
+
+class ArqBusca{
+   static StringBuffer memoria = new StringBuffer();
+   // StringBuffer é uma classe de mesmo nível de String que fornece grande
+   //parte da funcionalidade de strings. 
+   //StringBuffer representa sequências de caracteres crescentes e graváveis.
+
+   public static void main(String[] args){
+      try{
+         BufferedReader entrada;
+         entrada = new BufferedReader (new InputStreamReader (System.in));
+         BufferedReader arqentrada;
+         arqentrada = new BufferedReader (new FileReader (&quot;c:/Agenda.txt&quot;));
+
+         System.out.println (&quot;Digite o nome&quot;);
+         String nome = entrada.readLine();
+         String endereco = &quot;&quot;;
+         String telefone = &quot;&quot;;
+         String linha = &quot;&quot;;
+
+         while ((linha = arqentrada.readLine()) != null ) {
+            memoria.append (linha + &quot;\n&quot;); 
+            // append é o método aloca novas strings concatenadas para o mesmo objeto
+         }
+
+         int inicio = -1;
+         inicio = memoria.indexOf (Nome);
+         //indexOf: Método que retorna a posição da primeira ocorrência do(s) 
+         //caractere(s) especificado(s) em uma string.
+
+         if (inicio != -1){
+            int ultimo = memoria.indexOf (&quot;\t&quot;, inicio);
+            Nome = ler (inicio, ultimo);
+            int primeiro = ultimo + 1;
+            ultimo = memoria.indexOf (&quot;\t&quot;, primeiro);
+            endereco = ler (primeiro, ultimo);
+            primeiro = ultimo + 1;
+            int fim = memoria.indexOf (&quot;\n&quot;, primeiro);
+            telefone = ler (primeiro, fim);
+
+            regAgenda regAg1 = new regAgenda (Nome, Endereco, Telefone);
+            System.out.println (&quot;Endereco: &quot; + regAg1.mostraEnd () +
+            &quot;Telefone: &quot; + regAg1.mostraTel ());
+            System.out.println (&quot;Entre com novo endereco&quot;);
+            endereco = entrada.readLine ();
+            regAg1.alteraEnd (Endereco);
+            System.out.println (&quot;Entre com novo telefone&quot;);
+            telefone = entrada.readLine ();
+            regAg1.alteraTel (Telefone);
+            memoria.replace (inicio, fim, regAg1.mostraNome () + &quot;\t&quot; +
+            regAg1.mostraEnd () + &quot;\t&quot; + regAg1.mostraTel ());
+            gravar ();
+            arqentrada.close ();
+         }else{
+            System.out.println (&quot;Item nao encontrado&quot;);
+         }
+         arqentrada.close ();
+      } catch (FileNotFoundException erro){
+         System.out.println (&quot;Arquivo nao encontrado!&quot;);
+         } catch (Exception erro){
+            System.out.println (&quot;Erro de Leitura !&quot;);
+        }
+   }
+
+   public static String ler (int primeiro, int ultimo){
+      String dados = &quot;&quot;;
+      char [] destino = new char [ultimo - primeiro];
+      memoria.getChars (primeiro, ultimo, destino, 0);
+      for (int i = 0; i &lt; destino.length; i++){
+         dados += destino [i];
+      }
+      return dados;
+   }
+
+   public static void gravar (){
+      try{
+         BufferedWriter saida;
+         saida = new BufferedWriter (new FileWriter (&quot;c:/Agenda.txt&quot;));
+         saida.write (memoria.toString ());
+         saida.flush ();
+         saida.close ();
+      } catch (Exception erro){
+         System.out.println (&quot;Erro de gravacao!&quot;);
+      }
+   }
+}
+
+
+Criar Classe regAgenda
+
+package arquivo;
+
+public class regAgenda{
+	private String nome;
+	private String end;
+	private String tel;
+
+	public regAgenda (String nom, String ender,
+		String telef){
+		nome = nom;
+		end = ender;
+		tel = telef;
+	}
+	public String mostraNome (){
+		return nome;
+	}
+	public String mostraEnd (){
+		return end;
+	}
+	public String mostraTel (){
+		return tel;
+	}
+	public void alteraEnd (String ender){
+		end = ender;
+	}
+	public void alteraTel (String telef){
+		tel = telef;
+	}
+}</code></pre><p id="54778ef7-8a60-448b-aa47-e0f19ef6bff9" class="">
+</p><h2 id="64c777d2-e9b0-47f8-ba61-9ec39c6fc1f4" class="">Manipulação de Arquivos: Exclusão.</h2><pre id="2366f8cf-1e3d-43e8-b949-6ed887c34a92" class="code"><code>package arquivo1;
+import java.io.*;
+
+class ArqExclui{
+	static StringBuffer memoria = new StringBuffer(); // manipulação de arquivos
+	public static void main(String[] args){
+		try{
+			BufferedReader entrada;
+			entrada = new BufferedReader (new InputStreamReader (System.in));
+			BufferedReader arqentrada;
+			arqentrada = new BufferedReader (new FileReader (&quot;c:/Agenda.txt&quot;));
+			System.out.println (&quot;Digite o nome&quot;);
+			String Nome = entrada.readLine();
+			String linha = &quot;&quot;;
+			while ( (linha = arqentrada.readLine()) != null ) {
+				memoria.append (linha + &quot;\n&quot;);
+			}
+			int inicio = -1;
+			inicio = memoria.indexOf (Nome);
+			if (inicio != -1){
+				int fim = memoria.indexOf (&quot;\n&quot;, inicio);
+				linha = ler (inicio, fim);
+				System.out.println (&quot;Deseja excluir? Digite S ou N&quot;);
+				System.out.println (linha);
+				String resp = entrada.readLine ();
+				if (resp.equalsIgnoreCase (&quot;S&quot;)){
+					memoria.delete (inicio, fim + 1);
+					System.out.println (&quot;Registro excluido.&quot;);
+				}
+				gravar ();
+			}else{
+				System.out.println (&quot;Item nao encontrado&quot;);
+			}
+			arqentrada.close ();
+		} catch (FileNotFoundException erro){
+			System.out.println (&quot;Arquivo nao encontrado!&quot;);
+		} catch (Exception erro){
+			System.out.println (&quot;Erro de Leitura !&quot;);
+        }
+	}
+	public static String ler (int primeiro, int ultimo){
+		String dados = &quot;&quot;;
+		char [] destino = new char [ultimo - primeiro];
+		memoria.getChars (primeiro, ultimo, destino, 0);
+		for (int i = 0; i &lt; destino.length; i++){
+			dados += destino [i];
+		}
+		return dados;
+	}
+	public static void gravar (){
+		try{
+			BufferedWriter saida;
+			saida = new BufferedWriter (new FileWriter (&quot;c:/Agenda.txt&quot;));
+			saida.write (memoria.toString ());
+			saida.flush ();
+			saida.close ();
+		} catch (Exception erro){
+			System.out.println (&quot;Erro de gravacao!&quot;);
+        }
+	}
+}
+
+Criar Classe regAgenda
+
+package arquivo1;
+
+public class regAgenda{
+	private String nome;
+	private String end;
+	private String tel;
+
+	public regAgenda (String nom, String ender,
+		String telef){
+		nome = nom;
+		end = ender;
+		tel = telef;
+	}
+	public String mostraNome (){
+		return nome;
+	}
+	public String mostraEnd (){
+		return end;
+	}
+	public String mostraTel (){
+		return tel;
+	}	
+}</code></pre><p id="7a625d90-2f9d-4ed6-920b-80a1ea9b550b" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Lista</summary><div class="indented"><h2 id="33ffcf7c-a11d-4c4d-9324-cf89de4ea53e" class="">LISTAS SIMPLESMENTE ENCADEADAS</h2><p id="d6cbfb11-e8c5-4b76-8c8a-72ad4609c83c" class="">São listas que contém o endereço de apenas um registro. Os “ponteiros” apontam para o próximo registro.</p><pre id="d045f235-433a-4a57-91e6-9468c0722953" class="code"><code>class ListaSimples{
+	IntNoSimples primeiro, ultimo;
+	int numero_nos;
+	ListaSimples(){
+		primeiro = ultimo = null;
+}
+	void insereNo_fim (IntNoSimples novoNo){
+		novoNo.prox = null;
+	if (primeiro == null)/*nesta condição, é o primeiro elemento a ser inserido*/
+		primeiro = novoNo;
+	if (ultimo != null)
+		ultimo.prox = novoNo;
+		ultimo = novoNo;
+	}
+	void insereNo_inicio (IntNoSimples novoNo){
+	if (primeiro != null)
+                    novoNo.prox = primeiro;
+               else
+                  { if (primeiro == null)
+                    primeiro = novoNo;
+                    ultimo = novoNo;
+                  }
+	}
+        int ContarNos()
+            {  int tamanho = 0;
+               IntNoSimples temp_no = primeiro;
+               while (temp_no != null)
+                 { tamanho++;
+                   temp_no = temp_no.prox;
+                 }
+           return tamanho;
+             }
+        void insereNo_posicao(IntNoSimples novoNo, int posicao)
+            {IntNoSimples temp_no = primeiro;
+             int numero_nos = ContarNos();
+             int pos_aux;          
+             if(posicao == 0)
+                {novoNo.prox = primeiro;
+                 if(primeiro == ultimo)
+                    {ultimo = novoNo;}
+                 primeiro = novoNo;}
+             else
+                 {if (posicao &lt;= numero_nos)
+                   {  pos_aux = 1;
+                      while(temp_no != null &amp;&amp; posicao &gt; pos_aux)
+                      {temp_no = temp_no.prox;
+                       pos_aux ++;
+                      }
+                    novoNo.prox = temp_no.prox;
+                    temp_no.prox = novoNo;
+                   }
+                   else
+                    {if(posicao &gt; numero_nos)
+                     {ultimo.prox = novoNo;
+                      ultimo = novoNo;
+                }  }  } }
+        IntNoSimples buscaNo (int buscaValor){
+		int i = 0;
+		IntNoSimples temp_no = primeiro;
+		while (temp_no != null)
+                 { if (temp_no.valor == buscaValor)
+                     {System.out.println(&quot;No &quot; + temp_no.valor + &quot; posicao &quot; + i);
+                      return temp_no;
+                     }  
+                   i++;
+                   temp_no = temp_no.prox;
+                 }
+                return null;
+	}
+       void excluiNo (int valor)           
+                  { IntNoSimples temp_no = primeiro;
+                     while (temp_no != null &amp;&amp; temp_no.valor != valor)
+                     {temp_no = temp_no.prox;
+                   }
+                    temp_no.prox = temp_no.prox.prox;
+                    if (ultimo == temp_no.prox)
+                        ultimo = temp_no;
+                    }             
+     void exibeLista()
+      {IntNoSimples temp_no = primeiro;
+       int i = 0;
+       while (temp_no != null)
+        {System.out.println(&quot;Valor &quot; + temp_no.valor + &quot;           posicao &quot;+ i);
+         temp_no = temp_no.prox;
+         i++;
+     }}}
+
+package lsimplesmente;
+class IntNoSimples{
+	int valor;
+	IntNoSimples prox;/*variável com mesmo nome da classe, onde prox faz referência ao próx elemento da lista. Java não aceita ponteiros */
+
+	IntNoSimples(int valorNo){
+		valor = valorNo;
+		prox = null;
+	}
+ }</code></pre><p id="035f0144-af2b-47a7-be4c-2de95b4093bf" class="">
+</p><h2 id="16791df8-5601-4199-83c7-408bd97ed6bb" class="">Listas Duplamente Encadeadas</h2><p id="7cf1eef6-dc40-4b57-ac54-5e787d911e6b" class="">São listas que contém endereço do registro anterior e posterior.</p><pre id="2acd010d-e7e2-4ab2-b77c-478086011fbe" class="code"><code>Classe ListaDupla
+
+package ldupla;
+
+class ListaDupla{
+	IntNoDuplo primeiro, ultimo;
+	int numero_nos;
+
+	ListaDupla (){
+		primeiro = ultimo = null;
+		numero_nos = 0;
+	}
+
+	void insereNo (IntNoDuplo novoNo){
+		novoNo.prox = null;
+		novoNo.ant = ultimo;
+		if (primeiro == null)
+			primeiro = novoNo;
+		if (ultimo != null)
+			ultimo.prox = novoNo;
+		ultimo = novoNo;
+		numero_nos++;
+	}
+	IntNoDuplo pegarNo (int indice){
+		IntNoDuplo temp_no = primeiro;
+		for (int i = 0; (i &lt; indice) &amp;&amp; (temp_no != null); i++)
+			temp_no = temp_no.prox;
+		return temp_no;
+	}
+	void incluiNo (IntNoDuplo novoNo, int indice){
+		IntNoDuplo temp_no = pegarNo (indice);
+		novoNo.prox = temp_no;
+		if (novoNo.prox != null){
+			novoNo.ant = temp_no.ant;
+		novoNo.prox.ant = novoNo;
+		}else{
+		novoNo.ant = ultimo;
+		ultimo = novoNo;
+		}
+		if (indice == 0)
+			primeiro = novoNo;
+		else
+			novoNo.ant.prox = novoNo;
+		numero_nos++;
+	}
+	void excluiNo (int indice){
+		if (indice == 0){
+			primeiro = primeiro.prox;
+			if (primeiro != null)
+				primeiro.ant = null;
+		}else{
+			IntNoDuplo temp_no = pegarNo (indice);
+			temp_no.ant.prox = temp_no.prox;
+			if (temp_no != ultimo)
+				temp_no.prox.ant = temp_no.ant;
+			else
+				ultimo = temp_no;
+		}
+		numero_nos--;
+	}
+}  
+
+Classe IntNoDuplo
+package ldupla;
+
+class IntNoDuplo{
+	int valor;
+	IntNoDuplo prox;
+	IntNoDuplo ant;
+
+	IntNoDuplo (int valorNo){
+	valor = valorNo;
+	prox = ant = null;
+}
+}</code></pre></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Pilha</summary><div class="indented"><p id="97fbb391-8c19-4123-836b-dcab3818340b" class="">Estrutura de dados simples e bastante utilizada. O acesso é feito pelo topo. Se introduzido novo elemento, este fica no topo. O único elemento a ser removido é o do topo. O primeiro elemento que entrou é o último a sair. FILO = FIRST IN LAST OUT.</p><p id="6bc4dd39-7239-4bb7-8980-babd4b1fc585" class="">ex:</p><figure id="b0dd6d25-1f37-4a18-91a5-8cc1d7d9ff22" class="image" style="text-align:left"><a href="Prova%20Est%20dados%208104effea7af4c2489859087a8251e10/Untitled.png"><img style="width:672px" src="Prova%20Est%20dados%208104effea7af4c2489859087a8251e10/Untitled.png"/></a></figure><figure id="7031c9cf-c39c-4023-b35c-e52b709cabee" class="image" style="text-align:left"><a href="Prova%20Est%20dados%208104effea7af4c2489859087a8251e10/Untitled%201.png"><img style="width:672px" src="Prova%20Est%20dados%208104effea7af4c2489859087a8251e10/Untitled%201.png"/></a></figure><p id="e2f8c649-a4b5-4ad5-a7da-5b5b20ae8d7b" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Fila</summary><div class="indented"><p id="dea69cc5-ca29-4427-81ff-875011bb290f" class="">Estrutura de dados também simples e bastante utilizada. O acesso é feito pelo início. São acessados na ordem que foram inseridos. O elemento novo vai para o final da fila e quando é removido, será o primeiro elemento inserido. Primeiro que entrou e o primeiro que sai. (FIFO – FIRST IN FIRST OUT).</p><pre id="47a43f38-46c4-4431-bb00-24cdad2c0ff9" class="code"><code>package filas;
+
+import java.io.*;
+class usaFila {
+    public static void escolhas () {
+       System.out.println (&quot;Escolha a Opcao:&quot;);
+        System.out.print (&quot;\n1. Inserir&quot;);
+        System.out.print (&quot; \n2. Saída&quot;);
+        System.out.print (&quot; \n3. Exibir a Fila&quot;);
+        System.out.print (&quot; \n4. Sair&quot;);
+        System.out.print (&quot;\n. Opcao :\t &quot;);
+    }
+    public static void main(String args[]){
+        Fila objFila = new Fila(4);
+        BufferedReader entrada;
+	   entrada = new BufferedReader( 
+                    new InputStreamReader (System.in) );
+        Object valor;
+	try {
+	    escolhas();
+	    char opcao = entrada.readLine().charAt(0);
+          while (opcao != &#x27;4&#x27;) {
+		switch (opcao) {
+		    case &#x27;1&#x27; :
+			if (!objFila.cheia()) 
+                   {System.out.println (&quot;Digite Valor: &quot;);
+                    valor = entrada.readLine();
+                    objFila.enfileirar(valor);
+			    } 
+                else 
+			    {System.out.println(&quot;Fila Cheia ! &quot;);
+		          }
+			break;
+		    case &#x27;2&#x27; : 
+                if (objFila.vazia() == false) 
+      			{System.out.println(objFila.desenfileirar());
+			    } 
+                  else 
+			    {System.out.println(&quot;Fila Vazia ! &quot;);
+                     }
+                 break;
+                   case &#x27;3&#x27; : 
+                    objFila.exibeFila();
+        break;
+        default : System.out.println (&quot;Opcao Invalida !&quot;);
+     	}
+	System.out.println();
+	escolhas();
+     opcao = entrada.readLine().charAt(0);
+	}
+	} catch (Exception erro){
+	    System.out.println (&quot;Erro de Entrada de Dados&quot;);
+	}
+    }}
+
+Classe Fila
+
+package filas;
+
+class Fila {
+    int tamanho;
+    int inicio;
+    int fim;
+    int total;
+    Object vetor[];
+Fila(int tam) {
+       inicio = 0;
+       fim = 0;
+       total = 0;
+       tamanho = tam;
+       vetor = new Object[tam];
+ } 
+  public boolean vazia () {
+      if (total == 0) 
+         return true;
+      else 
+         return false;
+   }
+   public boolean cheia () {
+      if (total &gt;= tamanho) 
+         return true;
+      else 
+         return false;
+  }
+  public void enfileirar(Object elem) {
+       if ( !cheia())
+        { vetor[fim] = elem;
+          fim++;
+          total++;
+          if (fim &gt;= tamanho)
+               fim = 0;
+         }
+       else
+         { System.out.println(&quot;Fila Cheia&quot;);
+         }
+}
+  public Object desenfileirar()
+     { Object excluido;
+      { if (vazia() == false)
+         {excluido = vetor[inicio];
+          inicio++;
+          if (inicio &gt;= tamanho)
+            inicio = 0;
+          
+          return excluido;
+         } else
+          { excluido = null;
+            return excluido;
+          }
+   }
+   }
+public void exibeFila()
+  {for (int i = inicio; i &lt; total; i++)
+    {System.out.println(&quot;posicao &quot; + i +&quot; valor &quot;+vetor[i]);
+    }
+ }}</code></pre><p id="a85a7699-9180-436d-bf37-530d7ca491d9" class="">
+</p><figure id="b1e07198-c962-4fb1-af09-2df7affeee4a" class="image"><a href="Prova%20Est%20dados%208104effea7af4c2489859087a8251e10/Untitled%202.png"><img style="width:377px" src="Prova%20Est%20dados%208104effea7af4c2489859087a8251e10/Untitled%202.png"/></a></figure><figure id="41b50324-f183-4117-b532-2ed3b008a583" class="image"><a href="Prova%20Est%20dados%208104effea7af4c2489859087a8251e10/Untitled%203.png"><img style="width:336px" src="Prova%20Est%20dados%208104effea7af4c2489859087a8251e10/Untitled%203.png"/></a></figure><figure id="7932715c-5649-4719-9e0b-6b0b2a75f7d9" class="image"><a href="Prova%20Est%20dados%208104effea7af4c2489859087a8251e10/Untitled%204.png"><img style="width:346px" src="Prova%20Est%20dados%208104effea7af4c2489859087a8251e10/Untitled%204.png"/></a></figure></div></details></div></article></body></html>
